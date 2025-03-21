@@ -25,6 +25,9 @@ const LoginForm = () => {
     
     // Simulate API call
     setTimeout(() => {
+      // Store email in sessionStorage for authentication check
+      sessionStorage.setItem('userEmail', email);
+      
       setIsLoading(false);
       toast.success('Login realizado com sucesso');
       navigate('/dashboard');
